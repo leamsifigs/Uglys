@@ -6,17 +6,19 @@ public class UserAccount {
     private String fName;
     private String lName;
     private String email;
+    private String password;
     private String phoneNumber;
     private String streetAddress;
     private String city;
     private String State;
     private String Country;
 
-    public UserAccount(String user, String fName, String lName, String email, String phoneNumber, String streetAddress, String city, String state, String country) {
+    public UserAccount(String user, String fName, String lName, String email, String password, String phoneNumber, String streetAddress, String city, String state, String country) {
         this.user = user;
         this.fName = fName;
         this.lName = lName;
         this.email = email;
+        this.password = password;
         this.phoneNumber = phoneNumber;
         this.streetAddress = streetAddress;
         this.city = city;
@@ -30,6 +32,14 @@ public class UserAccount {
 
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getfName() {

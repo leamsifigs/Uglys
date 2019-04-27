@@ -63,17 +63,18 @@ public class MainActivity extends AppCompatActivity {
                 String fname = data.getStringExtra("fname");
                 String lname = data.getStringExtra("lname");
                 String email = data.getStringExtra("email");
+                String password = data.getStringExtra("password");
                 String phoneNumber = data.getStringExtra("phoneNumber");
                 String streetAddress = data.getStringExtra("streetAddress");
                 String city = data.getStringExtra("city");
                 String state = data.getStringExtra("state");
                 String country = data.getStringExtra("country");
 
-                UserAccount user = new UserAccount(userAccount,fname,lname,email, phoneNumber,streetAddress,city,state,country);
+                UserAccount user = new UserAccount(userAccount,fname,lname,email,password, phoneNumber,streetAddress,city,state,country);
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("/");
-                myRef.child("/").push().setValue("test");
+                myRef.child("/").push().setValue(user);
 
             }
 

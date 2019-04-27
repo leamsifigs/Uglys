@@ -24,6 +24,7 @@ public class createAccount extends AppCompatActivity {
     private EditText mEditTextFirstName;
     private EditText mEditTextLastName;
     private EditText mEditTextEmail;
+    private EditText mEditTextPassword;
     private EditText mEditTextPhoneNumber;
     private EditText mEditTextStreetAddress;
     private EditText mEditTextCity;
@@ -52,6 +53,7 @@ public class createAccount extends AppCompatActivity {
                 mEditTextFirstName = (EditText)findViewById(R.id.User_First_Name);
                 mEditTextLastName = (EditText)findViewById(R.id.User_Last_Name);
                 mEditTextEmail = (EditText)findViewById(R.id.User_Email);
+                mEditTextPassword = (EditText)findViewById(R.id.User_Password);
                 mEditTextPhoneNumber = (EditText)findViewById(R.id.User_Phone_Number);
                 mEditTextStreetAddress = (EditText)findViewById(R.id.User_Street_Address);
                 mEditTextCity = (EditText)findViewById(R.id.User_City);
@@ -62,6 +64,7 @@ public class createAccount extends AppCompatActivity {
                 String fName = mEditTextFirstName.getText().toString();
                 String lName = mEditTextLastName.getText().toString();
                 String email = mEditTextEmail.getText().toString();
+                String passsword = mEditTextPassword.getText().toString();
                 String phoneNumber = mEditTextPhoneNumber.getText().toString();
                 String streetAddress = mEditTextStreetAddress.getText().toString();
                 String city = mEditTextCity.getText().toString();
@@ -75,6 +78,7 @@ public class createAccount extends AppCompatActivity {
                 resultIntent.putExtra("fname", fName);
                 resultIntent.putExtra("lname", lName);
                 resultIntent.putExtra("email", email);
+                resultIntent.putExtra("password", passsword);
                 resultIntent.putExtra("phoneNumber", phoneNumber);
                 resultIntent.putExtra("streetAddress", streetAddress);
                 resultIntent.putExtra("city", city);
