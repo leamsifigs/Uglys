@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".createAccount"
+    tools:showIn="@layout/activity_create_account2">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:context=".MarkerPage">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account Type"
+                android:textSize="36dp"
+                android:layout_marginTop="320dp"
+                />
+
+            <RadioButton
+                android:id="@+id/Consumer_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Consumer"
+                android:textSize="24dp" />
+
+            <RadioButton
+                android:id="@+id/Producer_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producer"
+                android:textSize="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_First_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="John"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_Last_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Doe"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="JDoe@example.com"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_Phone_Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="1234567891"
+                android:inputType="text" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Street Adress"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_Street_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="123 example st"
+                android:inputType="text" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fake City"
+                android:inputType="text" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_State"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="California"
+                android:inputType="text" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Country"
+                android:textSize="36dp" />
+
+            <EditText
+                android:id="@+id/User_Country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="United States"
+                android:inputType="text" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Submit"
+                android:text="Submit"
+                />
+        </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
