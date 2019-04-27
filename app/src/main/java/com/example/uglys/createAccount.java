@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,8 +20,7 @@ import android.widget.RadioGroup;
 public class createAccount extends AppCompatActivity {
 
     private RadioGroup radioUserGroup;
-    private RadioButton radioConsumerButton;
-    private RadioButton radioProducerButton;
+    private RadioButton radioBtn;
     private EditText mEditTextFirstName;
     private EditText mEditTextLastName;
     private EditText mEditTextEmail;
@@ -39,7 +40,6 @@ public class createAccount extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         Button buttonSubmit = (Button)findViewById(R.id.Submit);
 
         buttonSubmit.setOnClickListener(new View.OnClickListener(){
@@ -47,8 +47,8 @@ public class createAccount extends AppCompatActivity {
             public void onClick(View v) {
 
                 radioUserGroup = (RadioGroup) findViewById(R.id.radioUser);
-                radioConsumerButton = (RadioButton) findViewById(R.id.Consumer_Button);
-                radioProducerButton = (RadioButton) findViewById(R.id.Producer_Button);
+                int selectedId = radioUserGroup.getCheckedRadioButtonId();
+                radioBtn = (RadioButton) findViewById(selectedId);
                 mEditTextFirstName = (EditText)findViewById(R.id.User_First_Name);
                 mEditTextLastName = (EditText)findViewById(R.id.User_Last_Name);
                 mEditTextEmail = (EditText)findViewById(R.id.User_Email);
@@ -58,9 +58,31 @@ public class createAccount extends AppCompatActivity {
                 mEditTextState = (EditText)findViewById(R.id.User_State);
                 mEditTextCountry = (EditText)findViewById(R.id.User_Country);
 
+                String userAccount = radioBtn.getText().toString();
+                String fName = mEditTextFirstName.getText().toString();
+                String lName = mEditTextLastName.getText().toString();
+                String email = mEditTextEmail.getText().toString();
+                String phoneNumber = mEditTextPhoneNumber.getText().toString();
+                String streetAddress = mEditTextStreetAddress.getText().toString();
+                String city = mEditTextCity.getText().toString();
+                String state = mEditTextState.getText().toString();
+                String country = mEditTextCountry.getText().toString();
 
-                Intent intent = new Intent(createAccount.this, MainActivity.class);
-                startActivity(intent);
+
+                Intent resultIntent = new Intent();
+
+                resultIntent.putExtra("user", userAccount);
+                resultIntent.putExtra("fname", fName);
+                resultIntent.putExtra("lname", lName);
+                resultIntent.putExtra("email", email);
+                resultIntent.putExtra("phoneNumber", phoneNumber);
+                resultIntent.putExtra("streetAddress", streetAddress);
+                resultIntent.putExtra("city", city);
+                resultIntent.putExtra("state", state);
+                resultIntent.putExtra("country", country);
+
+                setResult(RESULT_OK, resultIntent);
+                finish();
             }
         });
     }

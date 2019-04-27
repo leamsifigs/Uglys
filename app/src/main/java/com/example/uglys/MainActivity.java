@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -41,9 +44,39 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, createAccount.class);
-                startActivity(intent);
+                startActivityForResult(intent,1);
+
+
             }
         });
 
+
+
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode ==1)
+        {
+            if(resultCode == RESULT_OK) {
+                String userAccount = data.getStringExtra("user");
+                String fname = data.getStringExtra("fname");
+                String lname = data.getStringExtra("lname");
+                String email = data.getStringExtra("email");
+                String phoneNumber = data.getStringExtra("phoneNumber");
+                String streetAddress = data.getStringExtra("streetAddress");
+                String city = data.getStringExtra("city");
+                String state = data.getStringExtra("state");
+                String country = data.getStringExtra("country");
+
+                UserAccount user = new UserAccount(userAccount,fname,lname,email, phoneNumber,streetAddress,city,state,country);
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("/");
+                myRef.child("/").push().setValue("test");
+
+            }
+
+        }
     }
 }

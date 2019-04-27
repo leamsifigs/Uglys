@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "888860261459",
+    "firebase_url": "https://uglys-1a910.firebaseio.com",
+    "project_id": "uglys-1a910",
+    "storage_bucket": "uglys-1a910.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888860261459:android:78a61ae55ceafa40",
+        "android_client_info": {
+          "package_name": "com.example.uglys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888860261459-5gif59k8g372map05p3geibn4rfag6ak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uglys",
+            "certificate_hash": "399de489043f73ad9d6aa5735daab364333e3e47"
+          }
+        },
+        {
+          "client_id": "888860261459-hqfsqf8mq8pf1kpl96ok70n8gdgrgnku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYZD6qJoj9eHt6Y4C17J8lLamxKJ701ZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888860261459-hqfsqf8mq8pf1kpl96ok70n8gdgrgnku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
