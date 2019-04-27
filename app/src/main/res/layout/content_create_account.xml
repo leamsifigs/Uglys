@@ -30,19 +30,25 @@
                 android:layout_marginTop="320dp"
                 />
 
-            <RadioButton
-                android:id="@+id/Consumer_Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Consumer"
-                android:textSize="24dp" />
+            <RadioGroup
+                android:id="@+id/radioUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <RadioButton
-                android:id="@+id/Producer_Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Producer"
-                android:textSize="24dp" />
+                <RadioButton
+                    android:id="@+id/Consumer_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consumer"
+                    android:textSize="24dp" />
+
+                <RadioButton
+                    android:id="@+id/Producer_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Producer"
+                    android:textSize="24dp" />
+            </RadioGroup>
 
             <TextView
                 android:layout_width="match_parent"
